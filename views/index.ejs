@@ -1,0 +1,13 @@
+<h2>Upcoming Events</h2>
+<ul>
+    <% if (events && events.length > 0) { %>
+        <% events.forEach(event => { %>
+            <li>
+                <h3><%= event.title %></h3>
+                <p><%= event.date %> at <%= event.time %></p>
+            </li>
+        <% }); %>
+    <% } else { %>
+        <p>No upcoming events.</p>
+    <% } %>
+</ul>
